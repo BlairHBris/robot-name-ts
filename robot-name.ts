@@ -1,1 +1,6 @@
-export class Robot {}
+export class Robot {
+    name: string
+    constructor() {
+        this.name = 'Me'
+    }
+}
