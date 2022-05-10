@@ -7,7 +7,7 @@ export class Robot {
     name: string
     static usedNames =new Set<string>()
     static releaseNames() {
-        return null
+        this.usedNames.clear()
     }
 
     constructor() {
