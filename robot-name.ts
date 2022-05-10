@@ -5,7 +5,7 @@ interface IRobot {
 
 export class Robot {
     name: string
-    static usedNames: string[] = []
+    static usedNames =new Set<string>()
     static releaseNames() {
         return null
     }
@@ -22,8 +22,8 @@ export class Robot {
         let newName
         do {
             newName = this.randomName
-        } while (Robot.usedNames.includes(newName))
-        Robot.usedNames.push(newName)
+        } while (Robot.usedNames.has(newName))
+        Robot.usedNames.add(newName)
         return newName
     }
 
